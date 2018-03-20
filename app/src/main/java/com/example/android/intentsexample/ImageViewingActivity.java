@@ -27,9 +27,9 @@ public class ImageViewingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_showimage);
         mLoadingIndicator =  findViewById(R.id.pb_loading_indicator2);
 
-        Bundle b = getIntent().getExtras();
-       String imgUrl = b.getString("ÙRL");
-        System.out.println( b.getString("ÙRL"));
+        Bundle bundle = getIntent().getExtras();
+       String imgUrl = bundle.getString("ÙRL");
+        System.out.println(imgUrl);
         mImageView =  findViewById(R.id.image);
        mLoadingIndicator.setVisibility(View.VISIBLE);
         Picasso.with(ImageViewingActivity.this).load(imgUrl)
