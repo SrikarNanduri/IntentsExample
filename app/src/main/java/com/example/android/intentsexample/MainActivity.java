@@ -1,10 +1,13 @@
 package com.example.android.intentsexample;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +38,22 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         // Give the RecyclerView a default layout manager.
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //mAdapter.deleteFiles();
+    }
+
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdapter.deleteFiles();
+        finish();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mAdapter.deleteFiles();
     }
 
     private ArrayList prepareData(){
@@ -46,5 +65,11 @@ public class MainActivity extends AppCompatActivity {
             mList.add(imageUrls);
         }
         return mList;
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+
     }
 }

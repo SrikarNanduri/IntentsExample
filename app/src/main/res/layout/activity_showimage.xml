@@ -4,24 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="6dp">
-    <ImageButton
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/image"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:background="@null"/>
     <ProgressBar
-        android:id="@+id/pb_loading_indicator"
+        android:id="@+id/pb_loading_indicator2"
         android:layout_height="42dp"
         android:layout_width="42dp"
         android:layout_gravity="center"
         android:visibility="invisible" />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/share"
-        android:text="Share"
-        android:background="#DCDCDC"/>
 
 </LinearLayout>
