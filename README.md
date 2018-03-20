@@ -1,2 +1,3 @@
 # IntentsExample
-Android app demonstrating explicit Intents
+Android app demonstrating Intents
+We can share images among different apps and open the image to load in a new activity to see the full quality image.
