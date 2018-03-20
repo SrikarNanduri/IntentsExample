@@ -9,7 +9,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
         android:scaleType="fitCenter"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:background="@null"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/share"
+        android:text="Share"
+        android:background="#DCDCDC"/>
     <ProgressBar
         android:id="@+id/pb_loading_indicator"
         android:layout_height="42dp"
