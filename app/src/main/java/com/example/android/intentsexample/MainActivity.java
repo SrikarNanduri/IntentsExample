@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private IntentListAdapter mAdapter;
-
+    int resId = R.anim.layout_animation_fall_down;
 
     private final String android_image_urls[] = {
             "http://res.cloudinary.com/srikarnanduri/image/upload/v1521016291/toa-heftiba-250951-unsplash_aad8ft.jpg",
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         // Give the RecyclerView a default layout manager.
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         //mAdapter.deleteFiles();
+        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(this, resId);
+        mRecyclerView.setLayoutAnimation(animation);
     }
 
 
