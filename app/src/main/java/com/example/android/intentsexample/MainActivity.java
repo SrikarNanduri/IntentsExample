@@ -45,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutAnimation(animation);
     }
 
-
+    @Override
+    public void onEnterAnimationComplete() {
+        super.onEnterAnimationComplete();
+        mRecyclerView.scheduleLayoutAnimation();
+    }
 
     @Override
     protected void onDestroy() {
